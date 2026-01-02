@@ -2,6 +2,14 @@
 
 import Script from "next/script"
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'dotlottie-wc': any
+    }
+  }
+}
+
 export function LottiePlayer({
   src,
   className = "",

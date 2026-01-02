@@ -1,4 +1,4 @@
-import { HowItWorksPage } from "@/components/HowItWorksPage"
+import HowItWorksPage from "../../../components/HowItWorksPage"
 
 export const metadata = {
   title: "How It Works | Alicia Green",
