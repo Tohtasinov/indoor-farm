@@ -3,10 +3,6 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 
-function cn(...v: Array<string | false | undefined>) {
-  return v.filter(Boolean).join(" ")
-}
-
 function Reveal({
   children,
   delay = 0,
@@ -56,13 +52,7 @@ function StepCard({
   )
 }
 
-function Metric({
-  label,
-  value,
-}: {
-  label: string
-  value: string
-}) {
+function Metric({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-2xl border bg-white/70 p-4 backdrop-blur">
       <p className="text-xs text-neutral-600">{label}</p>
@@ -80,7 +70,7 @@ function QA({ q, a }: { q: string; a: string }) {
   )
 }
 
-export function HowItWorksPage() {
+export default function HowItWorksPage() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-10">
       <section className="relative overflow-hidden rounded-3xl border bg-white p-7 md:p-10">
@@ -111,7 +101,7 @@ export function HowItWorksPage() {
                 How it works
               </h1>
               <p className="text-neutral-700">
-                We grow microgreens in a clean indoor environment, harvest close to delivery time, pack in 60 g containers, and supply restaurants with scheduled volumes.
+                We grow microgreens indoors, harvest close to delivery time, pack in 60 g containers, and supply restaurants with scheduled volumes.
               </p>
             </Reveal>
 
@@ -169,7 +159,7 @@ export function HowItWorksPage() {
             <StepCard
               idx="02"
               title="Harvest close to delivery"
-              text="We harvest at peak freshness to keep the microgreens crisp and aromatic."
+              text="We harvest at peak freshness to keep microgreens crisp and aromatic."
               meta="Fresh"
             />
           </Reveal>
@@ -191,50 +181,6 @@ export function HowItWorksPage() {
               meta="B2C and B2B"
             />
           </Reveal>
-        </div>
-      </section>
-
-      <section className="mt-12 rounded-3xl border bg-neutral-50 p-7 md:p-10">
-        <div className="grid gap-6 md:grid-cols-2 md:items-start">
-          <Reveal>
-            <div className="space-y-2">
-              <h2 className="text-2xl font-semibold tracking-tight text-neutral-900">
-                Quality and storage
-              </h2>
-              <p className="text-neutral-700">
-                Microgreens are best fresh. Here is how to keep them at their best.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="grid gap-3">
-            <Reveal>
-              <div className="rounded-2xl border bg-white p-5">
-                <p className="text-sm font-semibold text-neutral-900">Keep refrigerated</p>
-                <p className="mt-2 text-sm text-neutral-700">
-                  Store in fridge. Keep the container dry and closed when possible.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.05}>
-              <div className="rounded-2xl border bg-white p-5">
-                <p className="text-sm font-semibold text-neutral-900">Use as a finish</p>
-                <p className="mt-2 text-sm text-neutral-700">
-                  Add microgreens right before serving to keep texture and aroma.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.1}>
-              <div className="rounded-2xl border bg-white p-5">
-                <p className="text-sm font-semibold text-neutral-900">Best window</p>
-                <p className="mt-2 text-sm text-neutral-700">
-                  For best taste, use within 3 to 5 days after delivery.
-                </p>
-              </div>
-            </Reveal>
-          </div>
         </div>
       </section>
 
@@ -260,7 +206,7 @@ export function HowItWorksPage() {
           <Reveal delay={0.05}>
             <QA
               q="Can restaurants set a schedule?"
-              a="Yes. Weekly and 2-3x per week schedules are available. You can request pricing on the contact page."
+              a="Yes. Weekly and 2-3x per week schedules are available. Request pricing on the contact page."
             />
           </Reveal>
           <Reveal delay={0.1}>
@@ -272,7 +218,7 @@ export function HowItWorksPage() {
           <Reveal delay={0.15}>
             <QA
               q="What pack size do you offer?"
-              a="Standard retail pack is 60 g. Wholesale volumes are flexible."
+              a="Standard pack is 60 g. Wholesale volumes are flexible."
             />
           </Reveal>
         </div>

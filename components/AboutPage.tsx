@@ -58,7 +58,7 @@ function Stat({ label, value }: { label: string; value: string }) {
   )
 }
 
-export function AboutPage() {
+export default function AboutPage() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-10">
       <section className="relative overflow-hidden rounded-3xl border bg-white p-7 md:p-10">
@@ -89,7 +89,8 @@ export function AboutPage() {
                 About Alicia Green
               </h1>
               <p className="text-neutral-700">
-                We are a microgreens brand focused on freshness, consistency, and easy supply for restaurants and retail. We grow indoors and deliver locally.
+                We sell ready microgreens in 60 g containers and provide stable
+                supply for restaurants and retail. We grow indoors and deliver locally.
               </p>
             </Reveal>
 
@@ -176,7 +177,7 @@ export function AboutPage() {
               <div className="rounded-2xl border bg-white p-5">
                 <p className="text-sm font-semibold text-neutral-900">Consistency</p>
                 <p className="mt-2 text-sm text-neutral-700">
-                  Same taste and texture from batch to batch. This matters for chefs and regular customers.
+                  Same taste and texture from batch to batch.
                 </p>
               </div>
             </Reveal>
@@ -192,7 +193,7 @@ export function AboutPage() {
               <div className="rounded-2xl border bg-white p-5">
                 <p className="text-sm font-semibold text-neutral-900">Service</p>
                 <p className="mt-2 text-sm text-neutral-700">
-                  You can request wholesale pricing, volumes and schedule with one simple form.
+                  Request wholesale pricing and schedule with one simple form.
                 </p>
               </div>
             </Reveal>

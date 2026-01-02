@@ -1,10 +1,10 @@
-import HowItWorksPage from "../../../components/HowItWorksPage"
+import AboutPage from "@/components/AboutPage"
 
 export const metadata = {
-  title: "How It Works | Alicia Green",
-  description: "How we grow, harvest, pack and deliver fresh microgreens.",
+  title: "About Us | Alicia Green",
+  description: "Local microgreens brand focused on freshness and consistency.",
 }
 
 export default function Page() {
-  return <HowItWorksPage />
+  return <AboutPage />
 }
